@@ -2,29 +2,27 @@ const cards = ["queen", "queen", "king", "king"];
 
 let cardsInPlay = [];
 
-let cardOne = cards[0];
-let cardTwo = cards[2];
-let cardFour; // added by myself to remove console error
-
-cardsInPlay.push(cardOne);
-cardsInPlay.push(cardTwo);
-
-/*Original Code written and working, but changed (to the below) due to it not being correct for this exercise.  Replaced with below, although I do have a question as to why it’s written like this given we have been taught about && || and if else, rather than nested if statements?
-
-if (cardsInPlay.length === 2 && cardsInPlay[0] === cardsInPlay[1]) {
-	alert("You found a match!");
-} else {
-	alert("Sorry try again");
-}*/
-
-if (cardsInPlay.length === 2) {
+//alternate way to declare a function
+//let checkForMatch = function() {
+function checkForMatch () {
+	
 	if (cardsInPlay[0] === cardsInPlay[1]) {
 		alert("You found a match!");
 	} else {
 		alert("Sorry, try again.");
 	}
-}
-	
-console.log("User flipped " + cardOne);
-console.log("User flipped " + cardTwo);
-console.log("User flipped " + cardFour);
+
+};
+
+function flipCard (cardId) {
+	console.log("User flipped " + cards[cardId])
+	cardsInPlay.push(cards[cardId]);
+
+	if (cardsInPlay.length === 2) {
+		checkForMatch();
+	}
+
+};
+
+flipCard(0);
+flipCard(2);
