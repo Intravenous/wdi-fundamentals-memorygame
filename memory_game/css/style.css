@@ -32,13 +32,6 @@ a:hover {
 	border-color: white;
 }
 
-/*.navi {
-	text-decoration: none;
-	color: #f15b31;
-	font-weight: 600;
-	font-size: 18px;
-}*/
-
 h1 {
 	color: #0d2c40;
 	font-weight: 400;
@@ -50,6 +43,7 @@ h2 {
 	color: #0d2c40;
 	font-weight: 600;
 	font-size: 20px;
+	padding-bottom: 15px;
 }
 
 p {
@@ -76,6 +70,23 @@ footer {
 	letter-spacing: .08em;
 	font-weight: 500;
 }
+
+/*Button styling - additional code*/
+button {
+	background-color: #f15b31;
+	color: #0d2c40;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 15px;
+	margin-top: 30px;
+	opacity: 0.4;
+	transition: 0.3s;
+}
+
+button:hover {
+	opacity: 1;
+}
+/*---------------*/
 
 .copyright, .message {
 	font-family: Raleway, Serif;

@@ -22,19 +22,58 @@ const cards = [
 	}
 ];
 
+// Extra - new reset game code.  To be ued with link------------
+//create function
+/*function refreshGame() {
+	location.reload();
+	alert('Good Luck!');
+};
+
+//create variable
+let reset = document.getElementById('reset');
+
+//create eventhandler
+reset.addEventListener('click', refreshGame);*/
+
+//-----------------------
+
+//EXTRA - alternate reset game code for button
+//create function
+function refreshGameButton() {
+	location.reload();
+	alert('Good Luck!');
+};
+
+//create variable
+let resetButton = document.querySelector('button');
+
+//create eventhandler
+resetButton.addEventListener('click', refreshGameButton); 
+
+//-----------
+
 let cardsInPlay = [];
 
-//alternate way to declare a function
+//alternate way to declare a function - is a function expression as opposed to the one used, which is a function declaration
 //let checkForMatch = function() {
 function checkForMatch () {
 	
 	if (cardsInPlay[0] === cardsInPlay[1]) {
 		alert("You found a match!");
+		playAgainFocus();
 	} else {
 		alert("Sorry, try again.");
+		playAgainFocus();
 	}
 
 };
+
+//EXTRA - function to give play again button focus
+function playAgainFocus() {
+	document.querySelector('button').focus();
+	document.querySelector('button').style.opacity = 1;
+};
+//-------------------
 
 function flipCard () {
 	//step 11b
